@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <style>
+        ul{
+            list-style: none;
+            margin: 0; padding: 0;
+            height: 100px;
+            display: flex;
+            background: #ccc; 
+        }
+        li{width: 100px;}
+        ul li:first-child{background: red;}
+        ul li:nth-child(2){background: blue;}
+        ul li:last-child{background: green;}
+        .flex1{flex-direction: row;}
+        .flex2{flex-direction: row-reverse;}
+        .flex3{flex-direction: column;}
+        .flex4{flex-direction: column-reverse;}
+    </style>
+    <h1>flex-direction:row</h1>
+    <ul class="flex1">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+    </ul>
+    <h1>flex-direction:row-reverse</h1>
+    <ul class="flex2">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+    </ul>
+    <h1>flex-direction:colum</h1>
+    <ul class="flex3">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+    </ul>
+    <h1>flex-direction:colum-reverse</h1>
+    <ul class="flex4">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+    </ul>
+</body>
+</html>

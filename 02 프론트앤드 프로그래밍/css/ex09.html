@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <style>
+        ul li:nth-child(2n+1){
+            background: green;
+            span{
+                color:black;
+            }
+        }
+        ul li:nth-child(2),
+        ul li:nth-child(4),
+        ul li:nth-child(6),
+        ul li:nth-child(8){
+            background: gray;
+        }
+        ul li:nth-child(3n+1){
+            color: white;
+        }
+        ul li:first-child{
+            background: red;
+        }
+        ul li:last-child{
+            background: blue;
+        }
+        ul li:not(.menu5){
+            width:30%;
+        }
+        ul::before{
+            width:130px;
+            height: 76px;
+            background: aqua;
+            content:'';
+            display:block;
+            background-image: url(../html/images/logo.png);
+        }
+        ul::after{
+            background: aqua;
+            content:'마지막!';
+        }
+    </style>
+    <ul>
+        <li><span>메뉴1</span></li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li class="menu5">메뉴5</li>
+        <li>메뉴6</li>
+        <li>메뉴7</li>
+        <li>메뉴8</li>
+        <li>메뉴9</li>
+        <li>메뉴10</li>
+    </ul>
+</body>
+</html>

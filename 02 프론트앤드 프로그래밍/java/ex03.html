@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{padding: 200px;}
+        .box1{background: #999;}
+        .box2{background: green;}
+        .box3{background: orange;}
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", function(){
+            const box1 = document.querySelector('.box1');
+            const box2 = document.querySelector('.box2');
+            const box3 = document.querySelector('.box3');
+            box1.addEventListener('click',function(){
+                console.log('box1클릭');
+            });
+            box2.addEventListener('click',function(){
+                console.log('box2클릭');
+            });
+            box3.addEventListener('click',function(e){
+                console.log('box3클릭');
+                console.log('event',e)
+                e.stopPropagation(); //이벤트가 전파만 차단
+                //e.stopImmediatePropagation();이벤트 전파 포함 전체 차단
+            });
+            box3.addEventListener('click',function(){
+                console.log('box3 clicked2');
+            });
+        });
+    </script>
+    <div class="box box1">
+        box1
+        <div class="box box2">
+            box2
+            <div class="box box3">
+                box3
+            </div>
+        </div>
+    </div>
+</body>
+</html>

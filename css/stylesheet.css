@@ -1,0 +1,14 @@
+@charset "UTF-8";
+*{font:12px #444444; display: block; position: relative; margin: 0; padding: 0; list-style: none; line-height: 1.2rem; align-items: center;border: 0; outline:none;}
+body{font-size:30px; margin:0; display: block;}
+footer{
+    width: 100%;
+    position:absolute;
+    bottom: 0;
+    text-align: center;
+    margin: 0 0 10px 0;
+    span{
+        font-size: 12px;
+        position: relative;
+    }
+}

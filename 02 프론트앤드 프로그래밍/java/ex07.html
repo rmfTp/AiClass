@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.addEventListener("DOMContentLoaded", function(){
+            const person={
+                name :'이이름',
+                age:40,
+                eventHandler(){
+                    console.log('this',this);
+                }
+            };
+            const button = document.getElementById('button');
+            button.addEventListener('click',person);
+        });
+    </script>
+    <button type="button" id="button">클릭</button>
+</body>
+</html>

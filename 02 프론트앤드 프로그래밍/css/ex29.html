@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <style>
+        ul{
+            list-style: none;
+            margin: 0; padding: 0;
+            height: 100px;
+            display: flex;
+            background: #ccc; 
+        }
+        li{width: 100px;}
+        ul li:first-child{background: red;}
+        ul li:nth-child(2){background: blue;}
+        ul li:last-child{background: green;}
+        .flex0{align-items: stretch;}
+        .flex1{align-items: flex-start;}
+        .flex2{align-items: flex-end;}
+        .flex3{align-items: center;}
+    </style>
+    <h1>align-items:stretch</h1>
+    <ul class="flex0">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+    </ul>
+    <h1>align-items:flex-start</h1>
+    <ul class="flex1">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+    </ul>
+    <h1>align-items:flex-end</h1>
+    <ul class="flex2">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+    </ul>
+    <h1>align-items:center</h1>
+    <ul class="flex3">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+    </ul>
+</body>
+</html>
