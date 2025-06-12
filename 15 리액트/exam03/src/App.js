@@ -1,13 +1,15 @@
 import MyComponent from './components/MyComponent';
 import MyComponent2 from './components/MyComponent2';
+import Counter from './components/Counter';
 
 function App() {
   return (
     <>
       <h1>안녕하세요</h1>
       <h2>반갑습니다</h2>
-      <MyComponent color="yellow" />
-      <MyComponent2 color="red" />
+      <MyComponent color="purple" favoriteNumber={7} />
+      <MyComponent2 color="red" background="skyblue" />
+      <Counter />
     </>
   );
 }
