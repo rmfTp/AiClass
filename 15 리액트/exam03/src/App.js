@@ -15,4 +15,8 @@ import Counter from './components/Counter';
 // }
 import Counter2 from './components/Counter2';
 
+const App = () => {
+  return <Counter />;
+};
+
 export default App;
