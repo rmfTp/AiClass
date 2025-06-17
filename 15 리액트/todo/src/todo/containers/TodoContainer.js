@@ -38,6 +38,22 @@ const TodoContainer = () => {
     //setForm(form);
   };
 
+  const onToggle = (id) => {
+    setItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === id ? { ...item, checked: !item.checked } : item,
+      ),
+    );
+  };
+
+  const onRemove = (id) => {
+    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+
+  const onRemoveAll = () => {
+    setItems(items.filter(({ checked }) => !checked));
+  };
+
   return (
     <>
       <TodoForm
@@ -46,7 +62,12 @@ const TodoContainer = () => {
         form={form}
         errors={errors}
       />
-      <TodoItems items={items} />
+      <TodoItems
+        items={items}
+        onToggle={onToggle}
+        onRemove={onRemove}
+        onRemoveAll={onRemoveAll}
+      />
     </>
   );
 };
