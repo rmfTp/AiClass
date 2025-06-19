@@ -1,8 +1,8 @@
-import News from './components/News';
+import Average from './components/Average';
 const App = ({ onClick }) => {
   return (
     <>
-      <News />
+      <Average />
     </>
   );
 };
