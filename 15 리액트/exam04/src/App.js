@@ -1,8 +1,8 @@
-import Average from './components/Average';
+import Counter3 from './components/Counter3';
 const App = ({ onClick }) => {
   return (
     <>
-      <Average />
+      <Counter3 />
     </>
   );
 };
