@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { produce } from 'immer';
 import TodoForm from '../components/TodoForm';
 import TodoItems from '../components/TodoItems';
 const TodoContainer = () => {
@@ -33,9 +34,14 @@ const TodoContainer = () => {
   };
 
   const onChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    // setForm({ ...form, [e.target.name]: e.target.value });
+    setItems(
+      produce((draft) => {
+        draft.push({ ...form, id: Date.now() });
+      }),
+    );
     //form[e.target.name] = e.target.value;
-    //setForm(form);
+    setForm(form);
   };
 
   const onToggle = (id) => {
@@ -47,7 +53,13 @@ const TodoContainer = () => {
   };
 
   const onRemove = (id) => {
-    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+    // setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+    const index = items.findIndex((item) => item.id === id);
+    setItems(
+      produce((draft) => {
+        draft.push(index, 1, 0);
+      }),
+    );
   };
 
   const onRemoveAll = () => {
