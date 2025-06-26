@@ -1,0 +1,37 @@
+@import './style/util.scss';
+.SassComponent {
+  display: flex;
+  .box {
+    background-color: gray;
+    width: 132px;
+    height: 1032px;
+    &.red {
+      background-color: $red;
+      @include square(1);
+    }
+    &.orange {
+      background-color: $orange;
+      @include square(2);
+    }
+    &.yellow {
+      background-color: $yellow;
+      @include square(3);
+    }
+    &.Lime {
+      background-color: $Lime;
+      @include square(4);
+    }
+    &.blue {
+      background-color: $blue;
+      @include square(5);
+    }
+    &.indigo {
+      background-color: $indigo;
+      @include square(6);
+    }
+    &.purple {
+      background-color: $purple;
+      @include square(7);
+    }
+  }
+}
