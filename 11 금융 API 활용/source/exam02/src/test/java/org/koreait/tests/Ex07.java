@@ -34,6 +34,7 @@ public class Ex07 {
     void init() {
         Member member = new Member();
         member.setName("사용자01");
+        member.setEmail("user01@test.org");
         member.setPassword("11111111");
         member.setAuthority(Authority.MEMBER);
         memberRepository.saveAndFlush(member);
