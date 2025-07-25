@@ -41,13 +41,16 @@ public class Member extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private Authority authority;
 
-    @Transient// 엔티티로 관리되는 필드 X, 엔티티 클래스 내부에서만 사용할 목적
-    private String profileImage;
+//    @Transient// 엔티티로 관리되는 필드 X, 엔티티 클래스 내부에서만 사용할 목적
+//    private String profileImage;
 
     @Embedded
     private Address address;
 
+    @OneToOne(fetch = FetchType.LAZY)
+    private MemberProfile profile; // 먼저 탐색할 곳에 정의 하는게 쿼리상 간편
+
     @ToString.Exclude
-    @OneToMany(mappedBy = "member")
+    @OneToMany(mappedBy = "member",cascade = {CascadeType.REMOVE,CascadeType.PERSIST}, orphanRemoval = true/*, fetch=FetchType.LAZY 기본값*/)
     private List<BoardData> items;
 }

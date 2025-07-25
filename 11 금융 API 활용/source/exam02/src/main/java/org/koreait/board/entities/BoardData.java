@@ -5,6 +5,8 @@ import lombok.Data;
 import org.koreait.global.entities.BaseEntity;
 import org.koreait.member.entities.Member;
 
+import java.util.List;
+
 @Data
 @Entity
 @Table(name="kit_board",
@@ -31,4 +33,7 @@ public class BoardData extends BaseEntity {
 
     @Transient
     private String insertedImage;
+
+    @ManyToMany
+    private List<HashTag> tags;
 }
