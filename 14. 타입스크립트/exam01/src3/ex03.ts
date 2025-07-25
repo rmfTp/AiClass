@@ -7,5 +7,5 @@ enum Direction {
 console.log(
   `UP:${Direction.UP},DOWN:${Direction.DOWN},LEFT:${Direction.LEFT},RIGHT:${Direction.RIGHT}`,
 )
-let dir = 'DOWN'
-console.log(dir === Direction.DOWN)
+let dir
+console.log(dir == typeof Direction.DOWN)
